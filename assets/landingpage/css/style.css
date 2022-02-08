@@ -1,0 +1,78 @@
+/* css by Yogi Sambodo */
+
+.tombol {
+	text-transform: uppercase;
+	border-radius: 40px;
+}
+
+.badan {
+	margin-top: 20px;
+}
+
+.frame-image {
+	/* 
+    CSS Untuk croping gambar / foto 
+
+    Disini Anda dapat menentukan lebar dan tinggi image
+    */
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+
+	/* 
+    CSS Untuk mengatur posisi gambar 
+    Menjadikan frame / bingkai sebagai patokan koordinat left/top
+    */
+	position: relative;
+}
+
+.frame-image img {
+	/*
+    CSS Untuk croping gambar
+    Membatasi tinggi gambar, membiarkan width-nya auto
+    Bisa juga diganti jadi height: 320px jika tinggi gambar mau dipaksakan jadi 320px
+    */
+	/* max-height: 320px; */
+	width: 100%;
+
+	/* 
+    CSS Untuk mengatur posisi gambar 
+    Left/top berpatokan pada frame
+    Diisi dengan nilai minus untuk memposisikan keluar dari frame
+    karena frame overflow-nya dibuat jadi hidden
+    posisi yg keluar area frame jadi tidak terlihat
+
+    Disini Anda dapat mengatur bagian/posisi gambar yg mana yg akan ditampilkan
+    */
+	position: absolute;
+	left: auto;
+	top: auto;
+}
+
+/*membuat rating*/
+.rating {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	text-align: center;
+}
+
+.rating>span {
+	display: inline-block;
+	position: relative;
+	width: 1.1em;
+}
+
+.rating span {
+	font-size: 30px;
+}
+
+.rating>span:hover:before,
+.rating>span:hover~span:before {
+	content: "\2605";
+	position: absolute;
+	color: gold;
+}
+
+.deskripsi {
+	margin-top: -15px;
+}
